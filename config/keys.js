@@ -1,3 +1,3 @@
 module.exports = {
-  mongoURI: 'mongodb://db:27017/app-covid19-jp'
+  mongoURI: 'mongodb://127.0.0.1:27017/app-covid19-jp'
 };
