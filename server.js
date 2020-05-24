@@ -8,12 +8,15 @@ const app = express();
 
 // Get the person routes
 const person = require('./routes/person');
+const atendimento = require('./routes/atendimento');
 
 // Apply the bodyParser middleware, to get json data from requests (Body)
 app.use(bodyParser.json());
 
 // Apply the routes of /api/person
 app.use('/api/person', person);
+
+app.use('/api/atendimento', atendimento);
 
 // Get the mongoURI for database
 const db = require('./config/keys').mongoURI;
