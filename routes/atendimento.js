@@ -25,6 +25,8 @@ router.get('/', (req, res) => {
 // @access  Public
 router.post('/', (req, res) => {
 
+    console.log(req.body);
+
     // Creating a new Person (Model)
     const atendimento = req.body;
 
