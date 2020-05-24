@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
     console.log(req.body);
 
     // Creating a new Person (Model)
-    const atendimento = req.body;
+    const atendimento = new Antendimentos(req.body);
 
     // Saving the new Person in the db
     atendimento
