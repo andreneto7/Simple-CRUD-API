@@ -4,6 +4,22 @@ const router = express.Router();
 const Antendimentos = require('../models/Atendimento');
 
 
+router.get('/', (req, res) => {
+    // Sending html in response with message
+    // res.send('Hello from persons');
+
+    // Query all documents in db
+    Antendimentos.find()
+        .then(a => {
+            // Returning documents to client
+            return res.json(a);
+        })
+        .catch(error => {
+            // Error handling
+            return res.status(500).json(error);
+        });
+});
+
 // @Route   POST api/person/new
 // @desc    Creating a new person
 // @access  Public
